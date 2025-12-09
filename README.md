@@ -9,8 +9,8 @@ It is purpose-built to identify suspicious activities, possible breaches, and mi
 
 Additionally, the bot is equipped with Telegram-based configuration and notification capabilities, allowing users to manage and monitor their network remotely, receive instant alerts, and execute specific defensive actions directly from their mobile devices.
 
-**Key Features**
-**1. Rust-Based Core Engine**
+## Key Features
+## 1. Rust-Based Core Engine
  
 Memory-Safe by Design: Written in Rust, the bot benefits from Rust’s strong guarantees on memory safety, making it immune to common bugs like buffer overflows and null pointer dereferencing.
 
@@ -18,7 +18,7 @@ High-Speed Packet Processing: Leveraging Rust’s zero-cost abstractions and asy
 
 Modular & Extensible: The codebase is structured into modular crates, making it easy to extend with custom detection logic, output formats, or new protocols.
 
-**2. Advanced Network Monitoring**
+## 2. Advanced Network Monitoring
 
 Real-Time Packet Sniffing: Captures and inspects packets from multiple interfaces using efficient asynchronous sniffers.
 
@@ -32,7 +32,7 @@ DNS Monitoring: Monitors DNS traffic for suspicious domains, tunneling, or fast-
 
 ARP Poisoning Detection: Flags anomalies in MAC/IP mappings to detect MITM attempts.
 
-**3. Anomaly & Threat Detection**
+## 3. Anomaly & Threat Detection
 
 Heuristic-Based Detection: Includes built-in rules for identifying brute-force attempts, SYN floods, DDoS patterns, and DNS amplification attacks.
 
@@ -40,23 +40,23 @@ Signature Matching: Integrates with popular rule engines (e.g., Snort, Suricata-
 
 Behavioral Profiling: Learns normal traffic patterns and raises alerts for deviations, such as unusual port access or abnormal data volume.
 
-**4. Telegram Configuration and Control**
+## 4. Telegram Configuration and Control
 
 Remote Management: Configure and control the bot via Telegram using simple commands.
 
 Bot Token & Chat ID Setup: Securely configured using .env file or encrypted config files for Telegram integration.
 
-Command Support Examples:
+## Command Support Examples:
 
-/status – Returns current system stats, active threats, and network load.
+* /status – Returns current system stats, active threats, and network load.
 
-/enable_dns_monitoring – Enables DNS analysis.
+* /enable_dns_monitoring – Enables DNS analysis.
 
-/block_ip 192.168.0.101 – Sends command to firewall integration to block a hostile IP.
+* /block_ip 192.168.0.101 – Sends command to firewall integration to block a hostile IP.
 
-/set_threshold 500kbps – Adjusts alert thresholds dynamically.
+* /set_threshold 500kbps – Adjusts alert thresholds dynamically.
 
-Instant Alerts: Sends real-time notifications of suspicious activities, including metadata like:
+* Instant Alerts: Sends real-time notifications of suspicious activities, including metadata like:
 
 Attacker IP, Port
 
@@ -66,14 +66,14 @@ Threat type (e.g., DoS, MITM, port scan)
 
 Packet payload (if safe to include)
 
-5. Customizable Rules and Configuration
+## 5. Customizable Rules and Configuration
 Config File Driven: YAML or TOML configuration files define network interfaces, Telegram credentials, thresholds, and rule sets.
 
 User-Defined Filters: Users can define packet filters using BPF syntax or custom Rust closures.
 
 Rule Reloading: Supports hot-reloading of configuration without restarting the service.
 
-6. Cross-Platform and Lightweight
+## 6. Cross-Platform and Lightweight
  
 Cross-Compatible: Works on Linux, Windows (via WSL or native with WinPcap/Npcap), and macOS.
 
@@ -81,7 +81,7 @@ Low Resource Usage: Optimized for minimal CPU and memory footprint—can run eff
 
 Technical Components
 
-**A. Core Modules**
+## A. Core Modules
 
 sniffer: Handles raw packet capture using libraries like libpnet, pcap, or afpacket.
 
@@ -97,7 +97,7 @@ config: Reads and validates configurations.
 
 firewall: (Optional) Interface to system firewalls (iptables, ufw, Windows Firewall) for active defense.
 
-**B. Telegram Integration in Rust**
+## B. Telegram Integration in Rust
 
 Telegram support is powered by crates like:
 
@@ -110,8 +110,7 @@ dotenv: Secure loading of secrets from environment files.
 Example: Basic Telegram Alert Function (Rust)
 
 rust
-Copy
-Edit
+
 use teloxide::prelude::*;
 use teloxide::types::ParseMode;
 
@@ -167,12 +166,12 @@ Linux/macOS/Windows
 Basic Installation Steps:
 Clone the Repository:
 
-bash
-Copy
-Edit
+```bash
+
 git clone https://github.com/Iankulani/Accurate-Cyber-Defense-Advanced-Network-Monitoring-Bot.git
 
 cd Accurate-Cyber-Defense-Advanced-Network-Monitoring-Bot
+```
 
 Create .env File:
 
