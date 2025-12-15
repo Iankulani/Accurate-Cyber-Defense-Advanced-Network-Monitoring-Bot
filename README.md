@@ -10,6 +10,7 @@ It is purpose-built to identify suspicious activities, possible breaches, and mi
 Additionally, the bot is equipped with Telegram-based configuration and notification capabilities, allowing users to manage and monitor their network remotely, receive instant alerts, and execute specific defensive actions directly from their mobile devices.
 
 ## Key Features
+
 ## 1. Rust-Based Core Engine
  
 Memory-Safe by Design: Written in Rust, the bot benefits from Rust’s strong guarantees on memory safety, making it immune to common bugs like buffer overflows and null pointer dereferencing.
@@ -124,7 +125,7 @@ Enterprise Security Operations Center (SOC):
 
 Integrate into SOC toolchains to monitor segmented networks.
 
-Use Telegram integration for mobile security personnel.
+* Use Telegram integration for mobile security personnel.
 
 Data Centers and ISPs:
 
